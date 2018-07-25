@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Storage;
 
 class CreateClientesTable extends Migration
 {
@@ -21,6 +22,7 @@ class CreateClientesTable extends Migration
             $table->string('telefone')->nullable();
             $table->string('endereco');
             $table->string('email')->unique();
+            $table->string('foto');
             $table->softDeletes();
             $table->timestamps();
         });
